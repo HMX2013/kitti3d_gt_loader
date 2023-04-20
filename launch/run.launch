@@ -1,0 +1,20 @@
+<launch>
+<rosparam param="/rate_hz">10</rosparam>
+<rosparam param="/frame_id">"map"</rosparam>
+<rosparam param="/seq">"00"</rosparam>
+<rosparam param="/debug">false</rosparam>
+
+<rosparam param="/data_path">"/home/dnn/paper_pose_est/dataset_kitti/gt_database"</rosparam>
+<rosparam param="/label_path">"/home/dnn/paper_pose_est/dataset_kitti/label_2"</rosparam>
+
+<!-- <rosparam param="/debug_path">"/home/dnn/paper_pose_est/convex_optimize_fitting_debug_4/src/convex_optimize_fitting/evaluation/bias_0.txt"</rosparam> -->
+
+<rosparam param="/debug_seqn">1550</rosparam>
+<rosparam param="/debug_seqn_2">6</rosparam>
+
+<!-- For pseudo-publisher -->
+<node name="$(anon ros_kitti3d_array)" pkg="kitti3d" type="ros_kitti3d_array" output="screen" />
+
+<!-- <node name="rviz" pkg="rviz" type="rviz" args="-d $(find kitti3d)/rviz/kitti3d.rviz"/> -->
+
+</launch>
